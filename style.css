@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+:root{
+    /*Primary*/ 
+  --Pink: hsl(322, 100%, 66%);
+  --Light-Pink: hsl(321, 100%, 78%);
+  --Light-Red: hsl(0, 100%, 63%);
+
+    /*Neutral*/
+  --Very-Dark-Cyan: hsl(192, 100%, 9%);
+  --Very-Pale-Blue: hsl(207, 100%, 98%);
+  --body-font: 'Open Sans', sans-serif;
+  --headings-font: 'Poppins', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font);
+}
+h1,h2{
+    margin: 0;
+    font-family: var(--headings-font);
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+header img{
+    transform: scale(.8,.8);
+
+}
+.try-it-free-btn{
+   padding: 5px 20px;
+   border: 1px solid var(--Light-Red);
+   border-radius: 20px;
+   background-color: transparent;
+   color: var(--Light-Red);
+   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.226);
+   
+}
+.try-it-free-btn:hover{
+    cursor: pointer;
+    opacity: .8;
+}
+main p,main h1{
+    color: var(--Very-Dark-Cyan);
+}
+.screen-morkup-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+}
+.screen-morkup-section p{
+    max-width: 350px;
+    text-align-last: center;
+    font-size: 14px;
+}
+.screen-morkup-section img{
+    margin-top: 50px;
+}
+.get-started-btn{
+    padding: 10px 40px;
+    border: none;
+    color: white;
+    background-color: var(--Pink);
+    border-radius: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: opacity .5s;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.274) ;
+}
+.get-started-btn:hover{
+    opacity: .7;
+    cursor: pointer;
+}
+.stats-section{
+    display: flex;
+    justify-content: center;
+    column-gap: 300px;
+    margin-top: 50px;
+    padding: 50px;
+}
+.stats-section img{
+    transform: scale(.7,.7);
+}
+.stats-section h1{
+    font-size: 40px;
+    font-family: var(--headings-font);
+}
+.stats-section p{
+    text-align: center;
+}
+.bg-section{
+    background-image: url(images/bg-section-top-desktop-1.svg),
+    url(images/bg-section-bottom-desktop-1.svg);
+    background-repeat: no-repeat;
+    background-position: top , bottom;
+    padding: 130px 0px 100px;
+}
+.grow-together-section,
+.your-user-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 100px 0px;
+    background-color: var(--Very-Pale-Blue);
+    
+ 
+}
+.grow-together-section img,
+.your-user-section img,
+.flow-conversation-section img{
+    transform: scale(.8,.8);
+}
+.grow-together-section p,
+.your-user-section p,
+.flow-conversation-section p{
+    max-width: 400px;
+    font-size: 14px;
+}
+.flow-conversation-section{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row-reverse;
+    align-items: center;
+    padding: 100px;
+}
+aside{
+    text-align: center;
+    margin-top: 50px;
+}
+#aside-btn{
+    margin-top: 25px;
+}
+footer{
+    background-image: url(images/bg-footer-top-desktop.svg);
+    background-repeat: repeat-x;
+    margin-top: 100px;
+    color: white;
+    padding-top: 150px;
+}
+
+footer section{
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--Very-Dark-Cyan);
+    padding:10px 50px 30px;
+}
+footer section p{
+    max-width: 300px;
+    font-size: 14px;
+}
+.phone-contact,.email-contact{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.contact-grid svg{
+    transform: scale(.8,.8);
+}
+.subscription input{
+    padding: 5px;
+    width: 300px;
+    margin-right: 10px;
+}
+#subscribe-btn{
+   padding: 5px 10px;
+   border: none;
+   color: white;
+   background-color: var(--Pink);
+   font-weight: 600;
+}
+.social-media img{
+    margin-top: 10px;
+    margin-left: 5px;
+   width: 30px;
+}
+
+@media (max-width:850px) {
+    .grow-together-section,
+.your-user-section,
+.flow-conversation-section{
+    flex-direction: column;
+    flex-flow: column-reverse;
+    text-align: center;
+}
+}
+
+@media (max-width:800px) {
+    footer section{
+        flex-direction: column;
+        gap: 50px;
+        align-items: flex-start;
+    }
+}
+@media (max-width:600px) {
+    .stats-section{
+        all: unset;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin: 0;
+        margin-top: 10px;
+    }
+    .screen-morkup-section img{
+        transform: scale(.7,.7);
+    }
+    .screen-morkup-section img{
+        margin: 0;
+        margin-top: 10px;
+    }
+    
+}
+@media (max-width:500px) {
+    .screen-morkup-section img{
+        transform: scale(.5,.5);
+    }
+    .grow-together-section img,
+.your-user-section img,
+.flow-conversation-section img{
+    transform: scale(.5,.5);
+}
+header img{
+    transform: scale(.6,.6);
+}
+.subscription{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#subscribe-btn{
+    all: unset;
+    padding: 10px 15px;
+   border: none;
+   border-radius: 5px;
+   color: white;
+   background-color: var(--Pink);
+   font-weight: 500;
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+.subscription input{
+    all: unset;
+    padding: 10px;
+    max-width: 300px;
+    border-radius: 5px;
+    background-color: white;
+    margin-right: 0;
+    margin-top: 20px;
+}
+footer section{
+    padding-left: 0;
+    padding-left: 20px;
+}
+header{
+    padding: 0;
+    padding: 20px 10px;
+}
+.grow-together-section,
+.your-user-section,
+.flow-conversation-section{
+    padding: 0;
+    padding: 20px;
+}
+}
+@media (max-width:375px) {
+    .bg-section{
+        
+        background-image: url(images/bg-section-top-mobile-1.svg),
+        url(images/bg-section-bottom-mobile-1.svg);
+        background-repeat: no-repeat;
+        background-position: top , bottom;
+        padding: 110px 0px 50px;
+    }
+    footer{
+        background-image: url(images/bg-footer-top-mobile.svg);
+        background-repeat: repeat-x;
+    }
+    footer{
+        padding: 0;
+        padding-top: 50px;
+    }
+    .screen-morkup-section img{
+        transform: scale(.4,.4);
+    }
+}
+@media (max-width:365px) {
+    header{
+        all: unset;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 30px;
+    }
+}
